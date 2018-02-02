@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">Pokemon Quiz App</string>
+    <string name="welcome">Are you a real Pokemon master? \n Test your skills here!</string>
+    <string name="name">Insert your name here</string>
+    <string name="gender">Are you a boy or a girl?</string>
+    <string name="genderm">Boy</string>
+    <string name="genderf">Girl</string>
+
+    <string name="q1">1. Who\'s that Pokemon?</string>
+    <string name="q1a1">Primeape</string>
+    <string name="q1a2">Mankey</string>
+    <string name="q1a3">Pancham</string>
+
+    <string name="q2">2. Who\'s that Pokemon?</string>
+    <string name="q2a1">Arcanine</string>
+    <string name="q2a2">Growlithe</string>
+    <string name="q2a3">Ninetales</string>
+
+    <string name="q3">3. Who\'s that Pokemon?</string>
+    <string name="q3a1">Goldeen</string>
+    <string name="q3a2">Seaking</string>
+    <string name="q3a3">Magikarp</string>
+
+    <string name="q4">4. Who\'s that Pokemon?</string>
+    <string name="q4a1">Sunkern</string>
+    <string name="q4a2">Sudowoodo</string>
+    <string name="q4a3">Treecko</string>
+
+    <string name="q5">5. Who\'s that Pokemon?</string>
+    <string name="q5a1">Raticate</string>
+    <string name="q5a2">Sandshrew</string>
+    <string name="q5a3">Sandslash</string>
+
+    <string name="q6">6. Who\'s that Pokemon?</string>
+    <string name="q6a1">Gyarados</string>
+    <string name="q6a2">Vaporeon</string>
+    <string name="q6a3">Lapras</string>
+
+    <string name="q7">7. Who\'s that Pokemon?</string>
+    <string name="q7a1">Gengar</string>
+    <string name="q7a2">Gastly</string>
+    <string name="q7a3">Haunter</string>
+
+    <string name="q8">8. Who\'s that Pokemon?</string>
+    <string name="q8a1">Swellow</string>
+    <string name="q8a2">Pidgey</string>
+    <string name="q8a3">Spearow</string>
+
+    <string name="q9">9. Who\'s that Pokemon?</string>
+    <string name="q9a1">Taillow</string>
+    <string name="q9a2">Wingull</string>
+    <string name="q9a3">Pelipper</string>
+
+    <string name="q10">10. Who\'s that Pokemon?</string>
+    <string name="q10a1">Noibat</string>
+    <string name="q10a2">Golbat</string>
+    <string name="q10a3">Zubat</string>
+
+    <string name="q11">11. Who\'s that Pokemon?</string>
+    <string name="q11a1">Koffing</string>
+    <string name="q11a2">Weezing</string>
+    <string name="q11a3">Gastly</string>
+
+    <string name="q12">12. Who\'s that Pokemon?</string>
+    <string name="q12a1">Marowak</string>
+    <string name="q12a2">Cubone</string>
+    <string name="q12a3">Kabuto</string>
+
+    <string name="q13">13. Who\'s that Pokemon?</string>
+    <string name="q13a1">Jigglypuff</string>
+    <string name="q13a2">Wigglytuff</string>
+    <string name="q13a3">Clefairy</string>
+
+    <string name="q14">14. Who\'s that Pokemon?</string>
+    <string name="q14a1">Wooper</string>
+    <string name="q14a2">Chinchou</string>
+    <string name="q14a3">Mudkip</string>
+
+    <string name="q15">15. Who\'s that Pokemon?</string>
+    <string name="q15a1">Delcatty</string>
+    <string name="q15a2">Meowth</string>
+    <string name="q15a3">Skitty</string>
+
+    <string name="typeq">What type is this Pokemon?</string>
+
+    <string name="checkboxa1">Normal</string>
+    <string name="checkboxa2">Fighting</string>
+    <string name="checkboxa3">Flying</string>
+    <string name="checkboxa4">Poison</string>
+    <string name="checkboxa5">Ground</string>
+    <string name="checkboxa6">Rock</string>
+    <string name="checkboxa7">Bug</string>
+    <string name="checkboxa8">Ghost</string>
+    <string name="checkboxa9">Steel</string>
+    <string name="checkboxa10">Fire</string>
+    <string name="checkboxa11">Water</string>
+    <string name="checkboxa12">Grass</string>
+    <string name="checkboxa13">Electric</string>
+    <string name="checkboxa14">Psychic</string>
+    <string name="checkboxa15">Ice</string>
+    <string name="checkboxa16">Dragon</string>
+    <string name="checkboxa17">Dark</string>
+    <string name="checkboxa18">Fairy</string>
+
+    <string name="checkAnswers">Check your answers!</string>
+
+</resources>
