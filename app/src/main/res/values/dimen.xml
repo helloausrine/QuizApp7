@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="imageWidth">300dp</dimen>
+    <dimen name="imageHeight">166dp</dimen>
+    <dimen name="padding">10dp</dimen>
+    <dimen name="textBig">20sp</dimen>
+    <dimen name="textMedium">18sp</dimen>
+    <dimen name="textWidth">200dp</dimen>
+</resources>

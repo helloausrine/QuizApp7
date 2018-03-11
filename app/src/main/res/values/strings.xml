@@ -81,6 +81,11 @@
     <string name="q15a2">Meowth</string>
     <string name="q15a3">Skitty</string>
 
+    <string name="editTextQ">Last Question: \n How many pokemon there are?</string>
+    <string name="editTextA">Type your answer here</string>
+    <string name="buttonValidate">Validate</string>
+    <string name="buttonReset">Reset</string>
+
     <string name="typeq">What type is this Pokemon?</string>
 
     <string name="checkboxa1">Normal</string>
@@ -103,5 +108,8 @@
     <string name="checkboxa18">Fairy</string>
 
     <string name="checkAnswers">Check your answers!</string>
+
+    <string name="yourScoreIs">your score is</string>
+    <string name="yourScoreMessage">out of 30.\nYou are on your way of becoming a true pokemon master.</string>
 
 </resources>

@@ -8,30 +8,24 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dp">
+        android:orientation="vertical" >
+
+        <!--Title and Image-->
 
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="166dp"
-            android:layout_gravity="center"
+            style="@style/imageStyle"
             android:contentDescription="@string/app_name"
-            android:padding="10dp"
             android:src="@drawable/title"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/welcome"
-            android:textAlignment="center"
-            android:textSize="18sp"/>
+            style="@style/headerText"
+            android:text="@string/welcome" />
 
         <!--Insert Name-->
 
         <EditText
             android:id="@+id/nameInput"
-            android:layout_width="200dp"
+            android:layout_width="@dimen/textWidth"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
@@ -42,12 +36,8 @@
 
         <TextView
             android:id="@+id/gender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/gender"
-            android:textSize="18sp"/>
+            style="@style/headerText"
+            android:text="@string/gender" />
 
         <CheckBox
             android:id="@+id/genderm"
@@ -66,130 +56,109 @@
         <!--Name Question 1-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/q1"
-            android:textSize="18sp"/>
+            style="@style/headerText"
+            android:text="@string/q1" />
 
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="166dp"
-            android:layout_gravity="center"
-            android:padding="10dp"
+            style="@style/imageStyle"
             android:src="@drawable/pokemon1" />
 
         <RadioGroup
-            android:id="@+id/q1"
+            style="@style/radioGroupStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="vertical">
+            android:id="@+id/q1">
 
             <RadioButton
                 android:id="@+id/q1a1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/radioButtonStyle"
+                android:onClick="onRadioButtonSetQ1Clicked"
                 android:text="@string/q1a1" />
 
             <RadioButton
-                android:id="@+id/q1a2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/q1a2_true"
+                style="@style/radioButtonStyle"
+                android:onClick="onRadioButtonSetQ1Clicked"
                 android:text="@string/q1a2" />
 
             <RadioButton
                 android:id="@+id/q1a3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/radioButtonStyle"
+                android:onClick="onRadioButtonSetQ1Clicked"
                 android:text="@string/q1a3" />
         </RadioGroup>
 
         <!--Type Question 1-->
 
-<!--        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/typeq"
-            android:padding="10dp"
-            android:textSize="18sp" />
+        <TextView
+            style="@style/headerText"
+            android:text="@string/typeq" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            style="@style/linearLayoutStyleHorizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq1a1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa1" />
 
                 <CheckBox
                     android:id="@+id/typeq1a2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa5" />
 
                 <CheckBox
                     android:id="@+id/typeq1a3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa17" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq1a4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa14" />
 
                 <CheckBox
-                    android:id="@+id/typeq1a5"
+                    android:id="@+id/typeq1a5_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa2" />
 
                 <CheckBox
                     android:id="@+id/typeq1a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa6" />
             </LinearLayout>
 
-        </LinearLayout>-->
+        </LinearLayout>
+
         <!--Name Question 2-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/q2"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/q2" />
 
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="166dp"
-            android:layout_gravity="center"
-            android:padding="10dp"
+            style="@style/imageStyle"
             android:src="@drawable/pokemon2" />
 
         <RadioGroup
@@ -200,111 +169,98 @@
             android:orientation="vertical">
 
             <RadioButton
-                android:id="@+id/q2a1"
+                android:id="@+id/q2a1_true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ2Clicked"
                 android:text="@string/q2a1" />
 
             <RadioButton
                 android:id="@+id/q2a2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ2Clicked"
                 android:text="@string/q2a2" />
 
             <RadioButton
                 android:id="@+id/q2a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ2Clicked"
                 android:text="@string/q2a3" />
         </RadioGroup>
 
         <!--Type Question 2-->
 
-<!--
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/typeq"
-            android:padding="10dp"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/typeq" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            style="@style/linearLayoutStyleHorizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq2a1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa17" />
 
                 <CheckBox
                     android:id="@+id/typeq2a2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa1" />
 
                 <CheckBox
                     android:id="@+id/typeq2a3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa3" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
-                    android:id="@+id/typeq2a4"
+                    android:id="@+id/typeq2a4_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa10" />
 
                 <CheckBox
                     android:id="@+id/typeq2a5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa13" />
 
                 <CheckBox
                     android:id="@+id/typeq2a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa8" />
             </LinearLayout>
 
         </LinearLayout>
--->
 
         <!--Name Question 3-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/q3"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/q3" />
 
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="166dp"
-            android:layout_gravity="center"
-            android:padding="10dp"
+            style="@style/imageStyle"
             android:src="@drawable/pokemon3" />
 
         <RadioGroup
@@ -318,106 +274,95 @@
                 android:id="@+id/q3a1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ3Clicked"
                 android:text="@string/q3a1" />
 
             <RadioButton
                 android:id="@+id/q3a2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ3Clicked"
                 android:text="@string/q3a2" />
 
             <RadioButton
-                android:id="@+id/q3a3"
+                android:id="@+id/q3a3_true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ3Clicked"
                 android:text="@string/q3a3" />
         </RadioGroup>
 
         <!--Type Question 3-->
-<!--
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/typeq"
-            android:padding="10dp"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/typeq" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            style="@style/linearLayoutStyleHorizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq3a1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa14" />
 
                 <CheckBox
                     android:id="@+id/typeq3a2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa16" />
 
                 <CheckBox
-                    android:id="@+id/typeq3a3"
+                    android:id="@+id/typeq3a3_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa11" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq3a4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa3" />
 
                 <CheckBox
                     android:id="@+id/typeq3a5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa1" />
 
                 <CheckBox
                     android:id="@+id/typeq3a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa18" />
             </LinearLayout>
 
-        </LinearLayout>-->
+        </LinearLayout>
 
         <!--Name Question 4-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/q4"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/q4" />
 
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="166dp"
-            android:layout_gravity="center"
-            android:padding="10dp"
+            style="@style/imageStyle"
             android:src="@drawable/pokemon4" />
 
         <RadioGroup
@@ -431,106 +376,95 @@
                 android:id="@+id/q4a1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ4Clicked"
                 android:text="@string/q4a1" />
 
             <RadioButton
-                android:id="@+id/q4a2"
+                android:id="@+id/q4a2_true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ4Clicked"
                 android:text="@string/q4a2" />
 
             <RadioButton
                 android:id="@+id/q4a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ4Clicked"
                 android:text="@string/q4a3" />
         </RadioGroup>
 
         <!--Type Question 4-->
 
-<!--        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/typeq"
-            android:padding="10dp"
-            android:textSize="18sp" />
+        <TextView
+            style="@style/headerText"
+            android:text="@string/typeq" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            style="@style/linearLayoutStyleHorizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq4a1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa9" />
 
                 <CheckBox
                     android:id="@+id/typeq4a2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa1" />
 
                 <CheckBox
                     android:id="@+id/typeq4a3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa5" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq4a4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa12" />
 
                 <CheckBox
-                    android:id="@+id/typeq4a5"
+                    android:id="@+id/typeq4a5_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa6" />
 
                 <CheckBox
                     android:id="@+id/typeq4a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa2" />
             </LinearLayout>
 
-        </LinearLayout>-->
+        </LinearLayout>
 
         <!--Name Question 5-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/q5"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/q5" />
 
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="166dp"
-            android:layout_gravity="center"
-            android:padding="10dp"
+            style="@style/imageStyle"
             android:src="@drawable/pokemon5" />
 
         <RadioGroup
@@ -544,106 +478,95 @@
                 android:id="@+id/q5a1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ5Clicked"
                 android:text="@string/q5a1" />
 
             <RadioButton
-                android:id="@+id/q5a2"
+                android:id="@+id/q5a2_true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ5Clicked"
                 android:text="@string/q5a2" />
 
             <RadioButton
                 android:id="@+id/q5a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ5Clicked"
                 android:text="@string/q5a3" />
         </RadioGroup>
 
         <!--Type Question 5-->
 
-<!--        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/typeq"
-            android:padding="10dp"
-            android:textSize="18sp" />
+        <TextView
+            style="@style/headerText"
+            android:text="@string/typeq" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            style="@style/linearLayoutStyleHorizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
-                    android:id="@+id/typeq5a1"
+                    android:id="@+id/typeq5a1_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa5" />
 
                 <CheckBox
                     android:id="@+id/typeq5a2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa6" />
 
                 <CheckBox
                     android:id="@+id/typeq5a3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa17" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq5a4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa1" />
 
                 <CheckBox
                     android:id="@+id/typeq5a5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa2" />
 
                 <CheckBox
                     android:id="@+id/typeq5a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa14" />
             </LinearLayout>
 
-        </LinearLayout>-->
+        </LinearLayout>
 
         <!--Name Question 6-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/q6"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/q6" />
 
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="166dp"
-            android:layout_gravity="center"
-            android:padding="10dp"
+            style="@style/imageStyle"
             android:src="@drawable/pokemon6" />
 
         <RadioGroup
@@ -657,106 +580,95 @@
                 android:id="@+id/q6a1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ6Clicked"
                 android:text="@string/q6a1" />
 
             <RadioButton
                 android:id="@+id/q6a2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ6Clicked"
                 android:text="@string/q6a2" />
 
             <RadioButton
-                android:id="@+id/q6a3"
+                android:id="@+id/q6a3_true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ6Clicked"
                 android:text="@string/q6a3" />
         </RadioGroup>
 
         <!--Type Question 6-->
-<!--
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/typeq"
-            android:padding="10dp"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/typeq" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            style="@style/linearLayoutStyleHorizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
-                    android:id="@+id/typeq6a1"
+                    android:id="@+id/typeq6a1_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa15" />
 
                 <CheckBox
                     android:id="@+id/typeq6a2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa18" />
 
                 <CheckBox
-                    android:id="@+id/typeq6a3"
+                    android:id="@+id/typeq6a3_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa11" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq6a4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa14" />
 
                 <CheckBox
                     android:id="@+id/typeq6a5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa16" />
 
                 <CheckBox
                     android:id="@+id/typeq6a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa3" />
             </LinearLayout>
 
-        </LinearLayout>-->
+        </LinearLayout>
 
         <!--Name Question 7-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/q7"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/q7" />
 
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="166dp"
-            android:layout_gravity="center"
-            android:padding="10dp"
+            style="@style/imageStyle"
             android:src="@drawable/pokemon7" />
 
         <RadioGroup
@@ -767,111 +679,98 @@
             android:orientation="vertical">
 
             <RadioButton
-                android:id="@+id/q7a1"
+                android:id="@+id/q7a1_true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ7Clicked"
                 android:text="@string/q7a1" />
 
             <RadioButton
                 android:id="@+id/q7a2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ7Clicked"
                 android:text="@string/q7a2" />
 
             <RadioButton
                 android:id="@+id/q7a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ7Clicked"
                 android:text="@string/q7a3" />
         </RadioGroup>
 
         <!--Type Question 7-->
-<!--
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/typeq"
-            android:padding="10dp"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/typeq" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            style="@style/linearLayoutStyleHorizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
-                    android:id="@+id/typeq7a1"
+                    android:id="@+id/typeq7a1_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa4" />
 
                 <CheckBox
                     android:id="@+id/typeq7a2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa9" />
 
                 <CheckBox
                     android:id="@+id/typeq7a3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa17" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq7a4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa14" />
 
                 <CheckBox
-                    android:id="@+id/typeq7a5"
+                    android:id="@+id/typeq7a5_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa8" />
 
                 <CheckBox
                     android:id="@+id/typeq7a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa13" />
             </LinearLayout>
 
         </LinearLayout>
--->
 
         <!--Name Question 8-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/q8"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/q8" />
 
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="166dp"
-            android:layout_gravity="center"
-            android:padding="10dp"
+            style="@style/imageStyle"
             android:src="@drawable/pokemon8" />
 
         <RadioGroup
@@ -882,109 +781,98 @@
             android:orientation="vertical">
 
             <RadioButton
-                android:id="@+id/q8a1"
+                android:id="@+id/q8a1_true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ8Clicked"
                 android:text="@string/q8a1" />
 
             <RadioButton
                 android:id="@+id/q8a2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ8Clicked"
                 android:text="@string/q8a2" />
 
             <RadioButton
                 android:id="@+id/q8a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ8Clicked"
                 android:text="@string/q8a3" />
         </RadioGroup>
 
-<!--        &lt;!&ndash;Type Question 8&ndash;&gt;
+        <!--Type Question 8-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/typeq"
-            android:padding="10dp"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/typeq" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            style="@style/linearLayoutStyleHorizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq8a1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa17" />
 
                 <CheckBox
                     android:id="@+id/typeq8a2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa7" />
 
                 <CheckBox
-                    android:id="@+id/typeq8a3"
+                    android:id="@+id/typeq8a3_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa3" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
-                    android:id="@+id/typeq8a4"
+                    android:id="@+id/typeq8a4_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa1" />
 
                 <CheckBox
                     android:id="@+id/typeq8a5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa11" />
 
                 <CheckBox
                     android:id="@+id/typeq8a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa13" />
             </LinearLayout>
 
-        </LinearLayout>-->
+        </LinearLayout>
 
         <!--Name Question 9-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/q9"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/q9" />
 
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="166dp"
-            android:layout_gravity="center"
-            android:padding="10dp"
+            style="@style/imageStyle"
             android:src="@drawable/pokemon9" />
 
         <RadioGroup
@@ -998,108 +886,95 @@
                 android:id="@+id/q9a1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ9Clicked"
                 android:text="@string/q9a1" />
 
             <RadioButton
-                android:id="@+id/q9a2"
+                android:id="@+id/q9a2_true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ9Clicked"
                 android:text="@string/q9a2" />
 
             <RadioButton
                 android:id="@+id/q9a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ9Clicked"
                 android:text="@string/q9a3" />
         </RadioGroup>
 
-<!--
-        &lt;!&ndash;Type Question 9&ndash;&gt;
+        <!--Type Question 9-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/typeq"
-            android:padding="10dp"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/typeq" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            style="@style/linearLayoutStyleHorizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq9a1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa1" />
 
                 <CheckBox
-                    android:id="@+id/typeq9a2"
+                    android:id="@+id/typeq9a2_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/checkboxa2" />
+                    android:onClick="onCheckBoxClicked"
+                    android:text="@string/checkboxa3" />
 
                 <CheckBox
                     android:id="@+id/typeq9a3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa15" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq9a4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa4" />
 
                 <CheckBox
-                    android:id="@+id/typeq9a5"
+                    android:id="@+id/typeq9a5_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa11" />
 
                 <CheckBox
                     android:id="@+id/typeq9a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa13" />
             </LinearLayout>
 
         </LinearLayout>
--->
 
         <!--Name Question 10-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/q10"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/q10" />
 
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="166dp"
-            android:layout_gravity="center"
-            android:padding="10dp"
+            style="@style/imageStyle"
             android:src="@drawable/pokemon10" />
 
         <RadioGroup
@@ -1113,106 +988,95 @@
                 android:id="@+id/q10a1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ10Clicked"
                 android:text="@string/q10a1" />
 
             <RadioButton
                 android:id="@+id/q10a2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ10Clicked"
                 android:text="@string/q10a2" />
 
             <RadioButton
-                android:id="@+id/q10a3"
+                android:id="@+id/q10a3_true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ10Clicked"
                 android:text="@string/q10a3" />
         </RadioGroup>
 
-<!--        &lt;!&ndash;Type Question 10&ndash;&gt;
+        <!--Type Question 10-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/typeq"
-            android:padding="10dp"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/typeq" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            style="@style/linearLayoutStyleHorizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq10a1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa16" />
 
                 <CheckBox
-                    android:id="@+id/typeq10a2"
+                    android:id="@+id/typeq10a2_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa4" />
 
                 <CheckBox
-                    android:id="@+id/typeq10a3"
+                    android:id="@+id/typeq10a3_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa3" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq10a4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa10" />
 
                 <CheckBox
                     android:id="@+id/typeq10a5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa13" />
 
                 <CheckBox
                     android:id="@+id/typeq10a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa14" />
             </LinearLayout>
 
-        </LinearLayout>-->
+        </LinearLayout>
 
         <!--Name Question 11-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/q11"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/q11" />
 
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="166dp"
-            android:layout_gravity="center"
-            android:padding="10dp"
+            style="@style/imageStyle"
             android:src="@drawable/pokemon11" />
 
         <RadioGroup
@@ -1223,109 +1087,98 @@
             android:orientation="vertical">
 
             <RadioButton
-                android:id="@+id/q11a1"
+                android:id="@+id/q11a1_true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ11Clicked"
                 android:text="@string/q11a1" />
 
             <RadioButton
                 android:id="@+id/q11a2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ11Clicked"
                 android:text="@string/q11a2" />
 
             <RadioButton
                 android:id="@+id/q11a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ11Clicked"
                 android:text="@string/q11a3" />
         </RadioGroup>
 
-<!--        &lt;!&ndash;Type Question 11&ndash;&gt;
+        <!--Type Question 11-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/typeq"
-            android:padding="10dp"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/typeq" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            style="@style/linearLayoutStyleHorizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq11a1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa8" />
 
                 <CheckBox
                     android:id="@+id/typeq11a2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa10" />
 
                 <CheckBox
                     android:id="@+id/typeq11a3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa3" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
-                    android:id="@+id/typeq11a4"
+                    android:id="@+id/typeq11a4_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa4" />
 
                 <CheckBox
                     android:id="@+id/typeq11a5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa7" />
 
                 <CheckBox
                     android:id="@+id/typeq11a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa17" />
             </LinearLayout>
 
-        </LinearLayout>-->
+        </LinearLayout>
 
         <!--Name Question 12-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/q12"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/q12" />
 
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="166dp"
-            android:layout_gravity="center"
-            android:padding="10dp"
+            style="@style/imageStyle"
             android:src="@drawable/pokemon12" />
 
         <RadioGroup
@@ -1336,109 +1189,98 @@
             android:orientation="vertical">
 
             <RadioButton
-                android:id="@+id/q12a1"
+                android:id="@+id/q12a1_true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ12Clicked"
                 android:text="@string/q12a1" />
 
             <RadioButton
                 android:id="@+id/q12a2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ12Clicked"
                 android:text="@string/q12a2" />
 
             <RadioButton
                 android:id="@+id/q12a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ12Clicked"
                 android:text="@string/q12a3" />
         </RadioGroup>
 
-<!--        &lt;!&ndash;Type Question 12&ndash;&gt;
+        <!--Name Question 12-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/typeq"
-            android:padding="10dp"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/typeq" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            style="@style/linearLayoutStyleHorizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
-                    android:id="@+id/typeq12a1"
+                    android:id="@+id/typeq12a1_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa5" />
 
                 <CheckBox
                     android:id="@+id/typeq12a2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa2" />
 
                 <CheckBox
                     android:id="@+id/typeq12a3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa1" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq12a4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa9" />
 
                 <CheckBox
                     android:id="@+id/typeq12a5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa12" />
 
                 <CheckBox
                     android:id="@+id/typeq12a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa6" />
             </LinearLayout>
 
-        </LinearLayout>-->
+        </LinearLayout>
 
         <!--Name Question 13-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/q13"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/q13" />
 
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="166dp"
-            android:layout_gravity="center"
-            android:padding="10dp"
+            style="@style/imageStyle"
             android:src="@drawable/pokemon13" />
 
         <RadioGroup
@@ -1452,106 +1294,95 @@
                 android:id="@+id/q13a1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ13Clicked"
                 android:text="@string/q13a1" />
 
             <RadioButton
-                android:id="@+id/q13a2"
+                android:id="@+id/q13a2_true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ13Clicked"
                 android:text="@string/q13a2" />
 
             <RadioButton
                 android:id="@+id/q13a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ13Clicked"
                 android:text="@string/q13a3" />
         </RadioGroup>
 
-       <!-- &lt;!&ndash;Type Question 13&ndash;&gt;
+        <!--Type Question 13-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/typeq"
-            android:padding="10dp"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/typeq" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            style="@style/linearLayoutStyleHorizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
-                    android:id="@+id/typeq13a1"
+                    android:id="@+id/typeq13a1_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa1" />
 
                 <CheckBox
-                    android:id="@+id/typeq13a2"
+                    android:id="@+id/typeq13a2_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa18" />
 
                 <CheckBox
                     android:id="@+id/typeq13a3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa8" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq13a4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa12" />
 
                 <CheckBox
                     android:id="@+id/typeq13a5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa14" />
 
                 <CheckBox
                     android:id="@+id/typeq13a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa2" />
             </LinearLayout>
 
         </LinearLayout>
--->
+
         <!--Name Question 14-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/q14"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/q14" />
 
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="166dp"
-            android:layout_gravity="center"
-            android:padding="10dp"
+            style="@style/imageStyle"
             android:src="@drawable/pokemon14" />
 
         <RadioGroup
@@ -1562,109 +1393,98 @@
             android:orientation="vertical">
 
             <RadioButton
-                android:id="@+id/q14a1"
+                android:id="@+id/q14a1_true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ14Clicked"
                 android:text="@string/q14a1" />
 
             <RadioButton
                 android:id="@+id/q14a2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ14Clicked"
                 android:text="@string/q14a2" />
 
             <RadioButton
                 android:id="@+id/q14a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ14Clicked"
                 android:text="@string/q14a3" />
         </RadioGroup>
 
-<!--        Type Question 14&ndash;&gt;
+        <!--Name Question 14-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/typeq"
-            android:padding="10dp"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/typeq" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            style="@style/linearLayoutStyleHorizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
-                    android:id="@+id/typeq14a1"
+                    android:id="@+id/typeq14a1_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa11" />
 
                 <CheckBox
                     android:id="@+id/typeq14a2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa13" />
 
                 <CheckBox
                     android:id="@+id/typeq14a3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa15" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq14a4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa12" />
 
                 <CheckBox
                     android:id="@+id/typeq14a5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa6" />
 
                 <CheckBox
-                    android:id="@+id/typeq14a6"
+                    android:id="@+id/typeq14a6_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa5" />
             </LinearLayout>
 
-        </LinearLayout>-->
+        </LinearLayout>
 
         <!--Name Question 15-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/q15"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/q15" />
 
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="166dp"
-            android:layout_gravity="center"
-            android:padding="10dp"
+            style="@style/imageStyle"
             android:src="@drawable/pokemon15" />
 
         <RadioGroup
@@ -1678,91 +1498,115 @@
                 android:id="@+id/q15a1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ15Clicked"
                 android:text="@string/q15a1" />
 
             <RadioButton
                 android:id="@+id/q15a2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ15Clicked"
                 android:text="@string/q15a2" />
 
             <RadioButton
-                android:id="@+id/q15a3"
+                android:id="@+id/q15a3_true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonSetQ15Clicked"
                 android:text="@string/q15a3" />
         </RadioGroup>
 
-      <!--  &lt;!&ndash;Type Question 15&ndash;&gt;
+        <!--Type Question 15-->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/typeq"
-            android:padding="10dp"
-            android:textSize="18sp" />
+            style="@style/headerText"
+            android:text="@string/typeq" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            style="@style/linearLayoutStyleHorizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
                     android:id="@+id/typeq15a1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa4" />
 
                 <CheckBox
                     android:id="@+id/typeq15a2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa17" />
 
                 <CheckBox
                     android:id="@+id/typeq15a3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa14" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/linearLayoutStyleVertical"
+                android:layout_weight="1">
 
                 <CheckBox
-                    android:id="@+id/typeq15a4"
+                    android:id="@+id/typeq15a4_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa1" />
 
                 <CheckBox
                     android:id="@+id/typeq15a5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa2" />
 
                 <CheckBox
                     android:id="@+id/typeq15a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onCheckBoxClicked"
                     android:text="@string/checkboxa18" />
             </LinearLayout>
 
             </LinearLayout>
--->
+
+<!--        &lt;!&ndash;Last Question&ndash;&gt;
+
+        <TextView
+            style="@style/headerText"
+            android:text="@string/editTextQ" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/answerInput"
+            android:layout_width="@dimen/textWidth"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:inputType="textCapSentences"
+            android:hint="@string/editTextA" />
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:onClick="checkEditText"
+            android:text="@string/buttonValidate" />
+
+    </LinearLayout>-->
 
         <!--Check Answers-->
 
@@ -1770,8 +1614,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:onClick="CheckAnswers"
+            android:onClick="showGrading"
             android:text="@string/checkAnswers" />
+
+        <Button
+            android:id="@+id/btn_toast_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="resetGrading"
+            android:text="@string/buttonReset" />
 
     </LinearLayout>
 
