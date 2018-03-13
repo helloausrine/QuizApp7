@@ -109,21 +109,21 @@
                     android:id="@+id/typeq1a1_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked1"
                     android:text="@string/checkboxa15" />
 
                 <CheckBox
                     android:id="@+id/typeq1a2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked1"
                     android:text="@string/checkboxa18" />
 
                 <CheckBox
                     android:id="@+id/typeq1a3_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked1"
                     android:text="@string/checkboxa11" />
             </LinearLayout>
 
@@ -135,21 +135,21 @@
                     android:id="@+id/typeq1a4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked1"
                     android:text="@string/checkboxa14" />
 
                 <CheckBox
                     android:id="@+id/typeq1a5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked1"
                     android:text="@string/checkboxa16" />
 
                 <CheckBox
                     android:id="@+id/typeq1a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked1"
                     android:text="@string/checkboxa3" />
             </LinearLayout>
 
@@ -211,21 +211,21 @@
                     android:id="@+id/typeq2a1_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked2"
                     android:text="@string/checkboxa4" />
 
                 <CheckBox
                     android:id="@+id/typeq2a2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked2"
                     android:text="@string/checkboxa9" />
 
                 <CheckBox
                     android:id="@+id/typeq2a3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked2"
                     android:text="@string/checkboxa17" />
             </LinearLayout>
 
@@ -237,21 +237,21 @@
                     android:id="@+id/typeq2a4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked2"
                     android:text="@string/checkboxa14" />
 
                 <CheckBox
                     android:id="@+id/typeq2a5_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked2"
                     android:text="@string/checkboxa8" />
 
                 <CheckBox
                     android:id="@+id/typeq2a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked2"
                     android:text="@string/checkboxa13" />
             </LinearLayout>
 
@@ -313,21 +313,21 @@
                     android:id="@+id/typeq3a1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked3"
                     android:text="@string/checkboxa17" />
 
                 <CheckBox
                     android:id="@+id/typeq3a2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked3"
                     android:text="@string/checkboxa7" />
 
                 <CheckBox
                     android:id="@+id/typeq3a3_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked3"
                     android:text="@string/checkboxa3" />
             </LinearLayout>
 
@@ -339,21 +339,21 @@
                     android:id="@+id/typeq3a4_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked3"
                     android:text="@string/checkboxa1" />
 
                 <CheckBox
                     android:id="@+id/typeq3a5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked3"
                     android:text="@string/checkboxa11" />
 
                 <CheckBox
                     android:id="@+id/typeq3a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked3"
                     android:text="@string/checkboxa13" />
             </LinearLayout>
 
@@ -415,21 +415,21 @@
                     android:id="@+id/typeq4a1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked4"
                     android:text="@string/checkboxa1" />
 
                 <CheckBox
                     android:id="@+id/typeq4a2_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked4"
                     android:text="@string/checkboxa3" />
 
                 <CheckBox
                     android:id="@+id/typeq4a3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked4"
                     android:text="@string/checkboxa15" />
             </LinearLayout>
 
@@ -441,21 +441,21 @@
                     android:id="@+id/typeq4a4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked4"
                     android:text="@string/checkboxa4" />
 
                 <CheckBox
                     android:id="@+id/typeq4a5_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked4"
                     android:text="@string/checkboxa11" />
 
                 <CheckBox
                     android:id="@+id/typeq4a6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onCheckBoxClicked"
+                    android:onClick="onCheckBoxClicked4"
                     android:text="@string/checkboxa13" />
             </LinearLayout>
 
