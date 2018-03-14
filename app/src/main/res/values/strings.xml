@@ -32,7 +32,7 @@
     <string name="buttonReset">Reset</string>
 
     <string name="typeq">What type is this Pokemon?</string>
-    <string name="missingInfo">Please fill in the missing information</string>
+    <string name="missingInfo">Please fill in the missing answer</string>
 
     <string name="checkboxa1">Normal</string>
     <string name="checkboxa2">Fighting</string>
