@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -26,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     int scoreRadioButtonSetQ4;
 
     //Radio Buttons
-
     //Q1
     private RadioButton radioButtonQ1A1;
     private RadioButton radioButtonQ1A2;
@@ -54,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
     int scoreCheckBoxQ4;
 
     //Radio Buttons
-
     //Q1
     private CheckBox checkBoxQ1A1;
     private CheckBox checkBoxQ1A2;
@@ -102,10 +102,7 @@ public class MainActivity extends AppCompatActivity {
         Button resetButton = this.findViewById(R.id.btn_toast_reset);
         resetButton.setVisibility(View.GONE);
 
-        //Retrieve views
-
-        //Check Boxes
-
+        //Retrieve CheckBox views
         //Q1
         checkBoxQ1A1 = findViewById(R.id.typeq1a1_true);
         checkBoxQ1A2 = findViewById(R.id.typeq1a2);
@@ -113,7 +110,6 @@ public class MainActivity extends AppCompatActivity {
         checkBoxQ1A4 = findViewById(R.id.typeq1a4);
         checkBoxQ1A5 = findViewById(R.id.typeq1a5);
         checkBoxQ1A6 = findViewById(R.id.typeq1a6);
-
 
         //Q2
         checkBoxQ2A1 = findViewById(R.id.typeq2a1_true);
@@ -139,8 +135,7 @@ public class MainActivity extends AppCompatActivity {
         checkBoxQ4A5 = findViewById(R.id.typeq4a5_true);
         checkBoxQ4A6 = findViewById(R.id.typeq4a6);
 
-        //Radio Buttons
-
+        //Retrieve Radio Button views
         //Q1
         radioButtonQ1A1 = findViewById(R.id.q1a1);
         radioButtonQ1A2 = findViewById(R.id.q1a2);
@@ -171,6 +166,7 @@ public class MainActivity extends AppCompatActivity {
         //Check EditText Question
         editTextAnswer = findViewById(R.id.answerInput);
         String textNumber = editTextAnswer.getText().toString().trim();
+        editTextAnswer.setFilters(new InputFilter[]{new InputFilterMinMax("0", "999")});
         if (textNumber == null | textNumber.isEmpty()) {
             Toast.makeText(this, getString(R.string.missingInfo), Toast.LENGTH_LONG).show();
             return;
@@ -245,4 +241,34 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         grading = 0;
     }
+
+    //Set Min and Max values for EditText Question
+    public class InputFilterMinMax implements InputFilter {
+        private int min, max;
+
+        public InputFilterMinMax(int min, int max) {
+            this.min = min;
+            this.max = max;
+        }
+
+        public InputFilterMinMax(String min, String max) {
+            this.min = Integer.parseInt(min);
+            this.max = Integer.parseInt(max);
+        }
+
+        @Override
+        public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+            try {
+                int input = Integer.parseInt(dest.toString() + source.toString());
+                if (isInRange(min, max, input))
+                    return null;
+            } catch (NumberFormatException nfe) { }
+            return "";
+        }
+
+        private boolean isInRange(int a, int b, int c) {
+            return b > a ? c >= a && c <= b : c >= b && c <= a;
+        }
+    }
 }
+
